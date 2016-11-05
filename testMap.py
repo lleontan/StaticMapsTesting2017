@@ -18,9 +18,9 @@ print(os.getcwd())
 def getImage(location):
     queryString= baseUrl+callType+location+apiKey
     print(queryString)
-    urllib.request.urlretrieve(queryString, "/Users/tanl/git/StaticMapsTesting2017/helloWorlds.png")
+    urllib.request.urlretrieve(queryString, "helloWorlds.png")
     #image1=Image.open("/Users/tanl/git/StaticMapsTesting2017/helloWorlds.png")
-    image1=pygame.image.load("/Users/tanl/git/StaticMapsTesting2017/helloWorlds.png")
+    image1=pygame.image.load("helloWorlds.png")
 
     return image1
 newQuery=getImage(sampleLocation)
