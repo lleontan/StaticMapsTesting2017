@@ -10,11 +10,13 @@ baseUrl="http://dev.virtualearth.net/REST/V1/"
 apiKey="&key=AuAaQIpuk55T4X2UIhXfXitbUHHzIJNHlQLK-Y5v5Na_tx5cAz9Fvmw-xUR5oW8T"
 callType="Imagery/Map/Road/"
 sampleLocation="Bellevue%20Washington?mapLayer=TrafficFlow"
+
+
 def getImage(location):
     queryString= baseUrl+callType+location+apiKey
     print(queryString)
     urllib.request.urlretrieve(queryString, "helloWorld.jpg")
-    img= pygame.image.load("helloWorld.jpg")
+    image1=pygame.image.load("helloWorld.jpg")
     return img
 newQuery=getImage(sampleLocation)
 while True:
