@@ -1,6 +1,7 @@
 import pygame
 from pygame.locals import *
-import os,sys
+import os
+import sys
 from PIL import Image
 from io import BytesIO
 import urllib.request
@@ -18,9 +19,9 @@ print(os.getcwd())
 def getImage(location):
     queryString= baseUrl+callType+location+apiKey
     print(queryString)
-    urllib.request.urlretrieve(queryString, "helloWorlds.png")
+    urllib.request.urlretrieve(queryString, "helloWorlds.jpg")
     #image1=Image.open("/Users/tanl/git/StaticMapsTesting2017/helloWorlds.png")
-    image1=pygame.image.load("helloWorlds.png")
+    image1=pygame.image.load("helloWorlds.jpg")
 
     return image1
 newQuery=getImage(sampleLocation)
